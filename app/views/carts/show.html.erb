@@ -4,6 +4,7 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if enhanced_cart.length > 0%>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -47,6 +48,13 @@
         </script>
       <% end %>
     </div>
+   
   </div>
+   <% end %>
+      <% if enhanced_cart.length == 0 %>
+    <div Class="alert alert-success">Your cart is empty. Please add items before checking out</div>
+    <div Class="button_to"><%= link_to 'Home', :root %> </div>
+    <% end %>
+  
 
 </section>
