@@ -51,7 +51,7 @@
    
   </div>
    <% end %>
-      <% if enhanced_cart.length == 0 %>
+      <% if enhanced_cart.empty? %>
     <div Class="alert alert-success">Your cart is empty. Please add items before checking out</div>
     <div Class="button_to"><%= link_to 'Home', :root %> </div>
     <% end %>
