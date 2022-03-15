@@ -1,6 +1,13 @@
 <h1>Signup!</h1>
 
-<%= form_for :user, url: '/users' do |f| %>
+<% if flash.alert %>
+<div class="alert alert-danger" role="alert">
+      <%= flash.alert %> 
+    </div>
+<% end %>
+
+
+<%= form_for(:user, url: '/users') do |f| %>
 
   Name: <%= f.text_field :name %>
   Email: <%= f.text_field :email %>
