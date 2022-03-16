@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
 
   #auhtorize the user before they can log out
-  before_filter :authorize
+  # before_filter :authorize
 
   def show
   end
